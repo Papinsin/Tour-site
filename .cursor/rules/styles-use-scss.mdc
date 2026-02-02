@@ -1,0 +1,11 @@
+---
+description: Make all CSS changes in the SCSS source file, not in compiled CSS
+globs: css/**/*
+alwaysApply: true
+---
+
+# Styles: Use SCSS
+
+- **Always edit `css/style.scss`** for any CSS/styling changes in this project.
+- Do **not** edit `css/style.css` directly — it is generated from the SCSS file (via build/compile).
+- After changing `style.scss`, the user may need to run their SCSS compiler (e.g. `sass` or a VS Code task) to update `style.css`.
