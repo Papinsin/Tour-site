@@ -12,9 +12,16 @@ body {
   color: #1a1a1a;
   background: #fafafa;
 }
-.title{
-    font-size: 2rem;
-    text-align: center;
+.title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2.about__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /* Layout */
@@ -30,11 +37,7 @@ body {
 }
   .cantainer {
     max-width: 720px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: gray;
+    margin: 0 auto;
   }
 
 /* Hero – full viewport, panel_text centered in the middle of the screen */
@@ -75,7 +78,6 @@ body {
 
 /* Header – overlays hero so hero fills viewport and content can be centered */
 header {
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   padding: 1rem 1.5rem;
   display: flex;
@@ -167,6 +169,25 @@ section h2 {
   font-size: 1.25rem;
   font-weight: 600;
 }
+#about {
+  .about_btn {
+    padding: 0.6rem 1.5rem;
+    min-height: 44px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: #fff;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+      background: #333;
+      color: #fff;
+    }
+  }
+}
 
 code {
   background: #eee;
@@ -174,6 +195,7 @@ code {
   border-radius: 4px;
   font-size: 0.9em;
 }
+
 
 /* Footer */
 footer {
