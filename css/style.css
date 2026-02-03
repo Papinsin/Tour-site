@@ -19,6 +19,13 @@ body {
   text-align: center;
 }
 
+h2.about__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 /* Layout */
 body {
   display: flex;
@@ -33,11 +40,8 @@ body {
 }
 
 .cantainer {
-  max-width: 75%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 /* Hero – full viewport, panel_text centered in the middle of the screen */
@@ -45,7 +49,6 @@ body {
   background-image: url("../images/Registan_Ensemble_elements_in_Samarkand.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
   display: flex;

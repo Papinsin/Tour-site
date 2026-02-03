@@ -23,7 +23,7 @@
       'mice.text': 'Add your MICE (Meetings, Incentives, Conferences, Exhibitions) content here.',
       'blog.title': 'Blog',
       'blog.text': 'Add your blog content here.',
-      'about.title': 'About',
+      'about.title': 'About Us',
       'about.text': 'At Dawud Travel, we believe that travel is the only thing you buy that makes you richer. Named after a legacy of wisdom and strength, our agency isn\'t just about booking tickets; it\'s about architecting experiences. Whether you are seeking spiritual fulfillment, a quiet escape, or a bold adventure, we provide the compass to get you there.',
       'contact.title': 'Contact',
       'contact.text': 'Add your contact details here.'
