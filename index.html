@@ -6,24 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dawud Travel</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
   <header>
     <h1>Dawud Travel</h1>
-    <nav class="nav_bar">
-      <a href="#home" data-i18n="nav.home">Home</a>
-      <a href="#about" data-i18n="nav.about">About</a>
-      <a href="#tours" data-i18n="nav.tours">Tours</a>
-      <a href="#cities" data-i18n="nav.cities">Cities</a>
-      <a href="#contact" data-i18n="nav.contact">Contact</a>
-      <a href="#mice" data-i18n="nav.mice">MICE</a>
-      <a href="#blog" data-i18n="nav.blog">Blog</a>
-    </nav>
-    <div class="lang-switcher" role="group" aria-label="Language">
-      <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-      <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
-      <button type="button" class="lang-btn" data-lang="uz" aria-pressed="false">UZ</button>
+    <button type="button" class="burger" aria-label="Menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="menu-panel">
+      <nav class="nav_bar">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#tours" data-i18n="nav.tours">Tours</a>
+        <a href="#maps" data-i18n="nav.maps">Maps</a>
+        <a href="#cities" data-i18n="nav.cities">Cities</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a href="#comments" data-i18n="nav.comments">Comments</a>
+        <a href="#blog" data-i18n="nav.blog">Blog</a>
+      </nav>
+      <div class="menu-languages" role="group" aria-label="Language">
+        <span class="menu-languages__label">Languages</span>
+        <div class="lang-switcher">
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
+          <button type="button" class="lang-btn" data-lang="uz" aria-pressed="false">UZ</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -31,61 +42,222 @@
     <section id="home">
       <div class="cantainer flex">
         <div class="panel_text">
-          <!-- <h2 data-i18n="home.title"class="panel_title">Dawud Travel </h2>  -->
-          <p data-i18n="home.text" class="panel_sub-title">Discover the Silk Road. Expert-led tours across Uzbekistan and Central Asia.</p>
+          <h2 data-i18n="home.title" class="panel_title">Dawud Travel </h2>
+          <p data-i18n="home.text" class="panel_sub-title">Explore the Hidden Heart of Uzbekistan</p>
         </div>
       </div>
     </section>
     <section id="about">
-      <div class="cantainer ">
+      <div class="cantainer flex">
         <h2 class="about__title title" data-i18n="about.title">About Us</h2>
-        <p data-i18n="about.text">At Dawud Travel, we believe that travel is the only thing you buy that makes you richer. Named after a legacy of wisdom and strength, our agency isn't just about booking tickets; it's about architecting experiences. Whether you are seeking spiritual fulfillment, a quiet escape, or a bold adventure, we provide the compass to get you there.</p>
-        <button type="button"class="about_btn">Learn More</button>
+        <p data-i18n="about.text">At Dawud Travel - Journey beyond the ordinary and discover the hidden heart of
+          Uzbekistan. Our trekking, hiking, and cultural tours invite you deep into the country’s most remote
+          landscapes, where timeless traditions and breathtaking nature come together. Step off the beaten path and
+          immerse yourself in genuine local life — this is travel that connects, inspires, and transforms.</p>
+        <button type="button" class="about_btn">Learn More</button>
+        <div class="about_info">
+          <div class="achievement_blocks flex">
+            <div class="achievement_block">
+              <h2 class="achievement_block_title">28+</h2>
+              <p>year of experience</p>
+            </div>
+            <div class="achievement_block">
+              <h2 class="achievement_block_title">200 000+</h2>
+              <p>satisfied tourists</p>
+            </div>
+            <div class="achievement_block">
+              <h2 class="achievement_block_title">10 000+</h2>
+              <p>organized tours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main_tour" id="main-tours">
+      <div class="cantainer">
+        <h2 class="main_tour-title">MAPS</h2>
+        <div class="swiper main-tours-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide main-tours__slide">
+              <div class="main-tours__slide-img-wrap">
+                <img src="./images/desert-yurt-tour.png" alt="Desert yurt tour map">
+              </div>
+              <h2 class="tour_title">7-Day Nuratau Mountain Hiking & Homestay</h2>
+            </div>
+            <div class="swiper-slide main-tours__slide">
+              <div class="main-tours__slide-img-wrap">
+                <img src="./images/horse-riding.png" alt="Horse riding tour map">
+              </div>
+              <h2 class="tour_title">6-Day Horse Riding in the Nuratau Mountains</h2>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
       </div>
     </section>
     <section id="tours">
       <div class="cantainer">
-        <h2 data-i18n="tours.title">Tours</h2>
-        <p data-i18n="tours.text">Add your tours content here.</p>
+        <h2 data-i18n="tours.title" class="tours_title">Tours</h2>
+        <div class="tour_list">
+          <div class="four_days_tour flex">
+            <div class="tour flex">
+              <img class="tour_image" src="images/tours/tour-01.png" alt="">
+              <h3 class="tour_title">
+                4-Day Sentob Homestay & Hiking;
+              </h3>
+              <button class="tour_button" type="button">more info</button>
+            </div>
+            <div class="tour flex">
+              <img class="tour_image" src="images/tours/tour-01.png" alt="">
+              <h3 class="tour_title">
+                4-Day Horse Riding
+              </h3>
+              <button class="tour_button" type="button">more info</button>
+            </div>
+            <div class="tour flex">
+              <img class="tour_image" src="images/tours/tour-01.png" alt="">
+              <h3 class="tour_title">
+                4-Day Hiking Hayat, Uhum & Asraf
+              </h3>
+              <button class="tour_button" type="button">more info</button>
+            </div>
+          </div>
+          <div class="three_days_tour flex">
+            <div class="tour flex">
+              <img class="tour_image" src="images/tours/tour-01.png" alt="">
+              <h3 class="tour_title">
+                3-Days Rural Homestay (Hayat)
+              </h3>
+              <button class="tour_button" type="button">more info</button>
+            </div>
+            <div class="tour flex">
+              <img class="tour_image" src="images/tours/tour-01.png" alt="">
+              <h3 class="tour_title">
+                3-Days Village-to-Village Horse Riding
+              </h3>
+              <button class="tour_button" type="button">more info</button>
+            </div>
+            <div class="tour flex">
+              <img class="tour_image" src="images/tours/tour-01.png" alt="">
+              <h3 class="tour_title">
+                3-Days Yurt Stay, Hiking & Lake Aydarkul
+              </h3>
+              <button class="tour_button" type="button">more info</button>
+            </div>
+          </div>
+          <div class="two_days_tour flex">
+            <div class="tour flex">
+              <img class="tour_image" src="images/tours/tour-01.png" alt="">
+              <h3 class="tour_title">
+                2-Days Desert Yurt Camp from Bukhara
+              </h3>
+              <button class="tour_button" type="button">more info</button>
+            </div>
+            <div class="tour flex">
+              <img class="tour_image" src="images/tours/tour-01.png" alt="">
+              <h3 class="tour_title">
+                2-Days Horse Riding (Nuratau)
+              </h3>
+              <button class="tour_button" type="button"> more info</button>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
     <section id="cities">
       <div class="cantainer">
-        <h2 data-i18n="cities.title">Cities</h2>
-        <p data-i18n="cities.text">Add your cities content here.</p>
+        <h2 class="title" data-i18n="cities.title">Cities</h2>
+        <div class="list_cities flex">
+          <div class="city Samarkand">
+            <h3 class="city_name">Samarkand</h3>
+          </div>
+          <div class="city Bukhara">
+            <h3 class="city_name">Bukhara</h3>
+          </div>
+          <div class="city Jizakh">
+            <h3 class="city_name">Jizakh</h3>
+          </div>
+          <div class="city Nurata">
+            <h3 class="city_name">Nurata</h3>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <section id="mice">
+    <section id="comments" class="comments">
       <div class="cantainer">
-        <h2 data-i18n="mice.title">MICE</h2>
-        <p data-i18n="mice.text">Add your MICE (Meetings, Incentives, Conferences, Exhibitions) content here.</p>
-      </div>
-    </section>
-
-    <section id="blog">
-      <div class="cantainer">
-        <h2 data-i18n="blog.title">Blog</h2>
-        <p data-i18n="blog.text">Add your blog content here.</p>
-      </div>
-    </section>
-
-
-
-    <section id="contact">
-      <div class="cantainer">
-        <h2 data-i18n="contact.title">Contact</h2>
-        <p data-i18n="contact.text">Add your contact details here.</p>
+        <h2 class="title" data-i18n="comments.title">Comments of our Clients</h2>
+        <div class="comments__rating" aria-label="Overall rating: 5 out of 5 stars">
+          <span class="comments__stars">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+          </span>
+          <span class="comments__rating-label" data-i18n="comments.rating">5 stars – evaluating your experience</span>
+        </div>
+        <div class="comment-list" aria-label="Comment list">
+          <article class="comment">
+            <div class="comment__stars" aria-hidden="true">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="comment__text">I liked this city.</p>
+            <div class="comment__client">— Client</div>
+          </article>
+          <article class="comment">
+            <div class="comment__stars" aria-hidden="true">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="comment__text">We had an amazing experience in Jizakh.</p>
+            <div class="comment__client">— Client</div>
+          </article>
+          <article class="comment">
+            <div class="comment__stars" aria-hidden="true">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="comment__text">My polite tour guide made the trip perfect.</p>
+            <div class="comment__client">— Client</div>
+          </article>
+          <article class="comment">
+            <div class="comment__stars" aria-hidden="true">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="comment__text">Highly recommend Dawud Travel for an authentic Silk Road adventure.</p>
+            <div class="comment__client">— Client</div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
-
   <footer>
-    <p>&copy; <span id="year"></span> Dawud Travel</p>
+    <h3>Dawud Travel</h3>
+    <div class="cantainer">
+      <div class="footer__content flex">
+        <div class="footer_info">
+          <h3>Contact Us</h3>
+          <div class="social_media flex">
+            <a href="tel:+15551234567" class=""> <i class="fa-solid fa-phone"></i>( +998 ) 91 540 61-19</a>
+            <a href="#" class=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="#" class=""><i class="fa-brands fa-whatsapp"></i> Whats-up</a>
+          </div>
+        </div>
+        <div class="footer_map flex">
+          <a href="https://maps.app.goo.gl/i1rCSkoxU4yxZg4F8"><i class="fa-solid fa-location-dot"></i>Our location is here :</a>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3071.7196633861063!2d66.9555441!3d39.6560232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d195bff7fc6ad%3A0xa33efee544c433f0!2sMakon%20Mall!5e0!3m2!1sru!2s!4v1770372828426!5m2!1sru!2s"  style="border:0;" class="footer_map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
   </footer>
-
-  <script src="js/main.js"></script>
+<!-- <h1>ddd</h1> -->
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
 
 </html>
