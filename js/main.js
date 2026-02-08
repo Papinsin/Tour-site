@@ -186,16 +186,14 @@
   // working with cities 
   const cities = document.querySelectorAll(".city")
   cities.forEach(city=>{
-    city.addEventListener("mouseenter", ()=>{
+    city.addEventListener("click", ()=>{
       removeActiveClass()
       city.classList.add("active")
     })
   })
   function removeActiveClass () {
     cities.forEach( city => {
-        city.addEventListener("mouseleave", ()=>{
           city.classList.remove("active")
-        })
     })
   }
 
@@ -217,3 +215,5 @@
   }
 
 })();
+const video_hero = document.querySelector(".hero_video")
+video_hero.playbackRate = 1.2;

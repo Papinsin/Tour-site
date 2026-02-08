@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dawud Travel</title>
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
     <button type="button" class="burger" aria-label="Menu" aria-expanded="false">
       <i class="fa-solid fa-bars"></i>
     </button>
-    <div class="menu-panel">
+    <div class="menu-panel flex">
       <nav class="nav_bar">
         <a href="#home" data-i18n="nav.home">Home</a>
         <a href="#about" data-i18n="nav.about">About</a>
@@ -26,15 +27,15 @@
         <a href="#contact" data-i18n="nav.contact">Contact</a>
         <a href="#comments" data-i18n="nav.comments">Comments</a>
         <a href="#blog" data-i18n="nav.blog">Blog</a>
+        <!-- <div class="menu-languages" role="group" aria-label="Language"> -->
       </nav>
-      <div class="menu-languages" role="group" aria-label="Language">
-        <span class="menu-languages__label">Languages</span>
-        <div class="lang-switcher">
+      <div class="lang-switcher">
           <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
           <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
           <button type="button" class="lang-btn" data-lang="uz" aria-pressed="false">UZ</button>
         </div>
-      </div>
+
+    </div>
     </div>
   </header>
 
@@ -92,8 +93,8 @@
             </div>
           </div>
           <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev mobile_look"></div>
+          <div class="swiper-button-next mobile_look"></div>
           <!-- <div class="swiper-scrollbar"></div> -->
         </div>
       </div>
@@ -168,7 +169,12 @@
         </div>
       </div>
     </section>
-
+      <section class="video_section">
+        <h2 class="video_section-title title">experience our clients receive</h2>
+      <video class="hero_video" autoplay loop muted controls width="100%">
+        <source src="./images/Mountain Villages in Nurota region Uzbekistan _ Advantour.mp4" type="video/mp4">
+      </video>
+    </section>
     <section id="cities">
       <div class="cantainer">
         <h2 class="title" data-i18n="cities.title">Cities</h2>
@@ -206,28 +212,32 @@
         <div class="comment-list" aria-label="Comment list">
           <article class="comment">
             <div class="comment__stars" aria-hidden="true">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="comment__text">I liked this city.</p>
             <div class="comment__client">— Client</div>
           </article>
           <article class="comment">
             <div class="comment__stars" aria-hidden="true">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="comment__text">We had an amazing experience in Jizakh.</p>
             <div class="comment__client">— Client</div>
           </article>
           <article class="comment">
             <div class="comment__stars" aria-hidden="true">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="comment__text">My polite tour guide made the trip perfect.</p>
             <div class="comment__client">— Client</div>
           </article>
           <article class="comment">
             <div class="comment__stars" aria-hidden="true">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="comment__text">Highly recommend Dawud Travel for an authentic Silk Road adventure.</p>
             <div class="comment__client">— Client</div>
@@ -249,13 +259,17 @@
           </div>
         </div>
         <div class="footer_map flex">
-          <a href="https://maps.app.goo.gl/i1rCSkoxU4yxZg4F8"><i class="fa-solid fa-location-dot"></i>Our location is here :</a>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3071.7196633861063!2d66.9555441!3d39.6560232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d195bff7fc6ad%3A0xa33efee544c433f0!2sMakon%20Mall!5e0!3m2!1sru!2s!4v1770372828426!5m2!1sru!2s"  style="border:0;" class="footer_map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a href="https://maps.app.goo.gl/i1rCSkoxU4yxZg4F8"><i class="fa-solid fa-location-dot"></i>Our location is
+            here :</a>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3071.7196633861063!2d66.9555441!3d39.6560232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d195bff7fc6ad%3A0xa33efee544c433f0!2sMakon%20Mall!5e0!3m2!1sru!2s!4v1770372828426!5m2!1sru!2s"
+            style="border:0;" class="footer_map" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
   </footer>
-<!-- <h1>ddd</h1> -->
+  <!-- <h1>ddd</h1> -->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>

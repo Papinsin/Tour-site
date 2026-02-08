@@ -12,15 +12,13 @@
 a {
     display: block;
     text-decoration: none; /* Removes the underline */
-    color: inherit;         /* Takes the color of the surrounding text */
+             /* Takes the color of the surrounding text */
     cursor: pointer;       /* Keeps the hand icon so users know it's clickable */
 }
 body {
   // margin: 0;
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  color: #1a1a1a;
-  background: #fafafa;
   position: relative;
 }
 .title {
@@ -69,15 +67,18 @@ body {
     color: #ffff;
     font-size: 2.0rem;      /* ~56px */
     font-weight: 700;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8),
-                 0 2px 8px rgba(0, 0, 0, 0.7),
-                 0 0 20px rgba(0, 0, 0, 0.5);
 
     .panel_title,
     h2 {
-      color: #fff;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9),
-                   0 2px 10px rgba(0, 0, 0, 0.8);
+      font-size: 110px;
+      color: white;
+      font-weight: 600;
+      transition: all 0.5s ease;
+      &:hover{
+        -webkit-text-stroke: 2px  white;
+        color: transparent;
+        
+      }
     }
 
     .panel_sub-title,
@@ -178,6 +179,7 @@ nav a:hover {
 
 /* Language switcher */
 .lang-switcher {
+  padding-left:2%;
   display: flex;
   gap: 0.25rem;
   align-items: center;
@@ -374,10 +376,10 @@ section h2 {
     box-sizing: border-box;
     width: 100%;
     /* Bigger swiper = more room for the image */
-    height: 90vh;
+    // max-height: 1200px;
     // min-height: 320px;
     max-height: none;
-    // padding: 0.5rem;
+    padding: 0.5rem;
 
     @media (min-width: 768px) {
       height: 90vh;
@@ -403,7 +405,6 @@ section h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // padding: 0 0.5rem;
     cursor: pointer;
   }
 
@@ -430,7 +431,7 @@ section h2 {
 
   .main-tours__slide p {
     flex-shrink: 0;
-    margin: 0.5rem 0 0;
+    // margin: 1.5rem 0 0;
     padding: 0 0.5rem;
   }
 }
@@ -455,6 +456,7 @@ section h2 {
     text-align: center;
   }
   .tour{
+    // font-size: clamp(20px, 8vw, 20px);
     max-width: 275px;
     transition: .3s;
     flex-direction: column;
@@ -473,7 +475,7 @@ section h2 {
     }
   }
   .tour_image{
-    min-height: 200px;
+    // min-height: 200px;
     width: 100%;
   }
   .tour_title{
@@ -603,7 +605,6 @@ section h2 {
 }
 
 .main-tours-swiper .swiper-pagination {
-    bottom: 0.75rem;
     transform: translateY(.8rem);
   }
 #cities{
@@ -635,6 +636,12 @@ section h2 {
   }
 }
 
+.video_section-title{
+  
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
 
 
 footer {
@@ -676,149 +683,192 @@ footer{
   }
 }
 
-/* ========== Mobile (768px and below) ========== */
-@media (max-width: 768px) {
-  .cantainer {
-    max-width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
+@media (max-width: 450px) {
+  .main_tour .main-tours__slide-img-wrap{
+    flex: none;
+    min-height:210px;
+  }
+  #about .achievement_blocks{
+  display: block;
+}
+
+  .tour {
+    width: 47%;
+    background-color: white;
+  }
+  #tours{
+    .tour_button{
+      min-height: 25px;
+      padding: 0;
+    width: 50%;
+    // padding: 0;
+    font-size: 10px;
   }
 
-  section {
-    margin-bottom: 2rem;
   }
+  .tour_title{
+    font-size: 11px;
+  }
+  .mobile_look{
+    display: block;
+    // background-color: #1a1a1a;
+    // height: 200px;
+    color: transparent;
+  }
+  #cities{
+  .list_cities{
 
-  /* Hero */
-  #home .panel_text {
-    font-size: 1.35rem;
-    padding: 0 0.5rem;
   }
-  #home .panel_text .panel_title,
-  #home .panel_text h2 {
-    font-size: 1.5rem;
+  .city{
+    height: 200px;
   }
-  #home .panel_text .panel_sub-title,
-  #home .panel_text p {
-    font-size: 1rem;
-  }
+}
+}
 
-  /* Header */
-  header {
-    padding: 0.75rem 1rem;
-  }
-  header h1 {
-    font-size: 1.25rem;
-  }
 
-  /* About – stack vertically */
-  #about .cantainer {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center;
-  }
-  #about .cantainer p {
-    margin: 1rem 0;
-  }
-  #about .achievement_blocks {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-  }
-  #about .achievement_block {
-    margin: 0;
-    padding: 1rem;
-  }
-  #about .achievement_block:nth-child(2) {
-    border-left: none;
-    border-right: none;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-  }
-  .achievement_block_title {
-    font-size: 2rem;
-  }
 
-  /* Maps / Main tour swiper */
-  .main_tour .main_tour-title {
-    font-size: 1.5rem;
-  }
-  .main_tour .main-tours-swiper {
-    height: 55vh;
-    min-height: 280px;
-  }
-  .main_tour .main-tours__slide-img-wrap {
-    min-height: 200px;
-  }
+// /* ========== Mobile (768px and below) ========== */
+// @media (max-width: 768px) {
+//   .cantainer {
+//     max-width: 100%;
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
 
-  /* Tours – single column, full-width cards */
-  #tours {
-    padding: 1.5rem 0;
-  }
-  #tours .tours_title {
-    font-size: 1.5rem;
-  }
-  #tours .tour_list .flex {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  #tours .tour {
-    max-width: 100%;
-    width: 100%;
-  }
-  #tours .tour_button {
-    min-height: 44px;
-  }
+//   section {
+//     margin-bottom: 2rem;
+//   }
 
-  /* Cities – horizontal scroll */
-#cities .list_cities {
-    background-color: #000;
-    // flex-wrap: nowrap;
-    // justify-content: flex-start;
-    // overflow-x: auto;
-    // -webkit-overflow-scrolling: touch;
-    // padding: 0.5rem 0 1rem;
-    // margin: 0 -1rem;
-    // padding-left: 1rem;
-    // padding-right: 1rem;
-//     width: 100%;
+//   /* Hero */
+//   #home .panel_text {
+//     font-size: 1.35rem;
+//     padding: 0 0.5rem;
+//   }
+//   #home .panel_text .panel_title,
+//   #home .panel_text h2 {
+//     font-size: 1.5rem;
+//   }
+//   #home .panel_text .panel_sub-title,
+//   #home .panel_text p {
+//     font-size: 1rem;
+//   }
+// //   /* Header */
+// //   header {
+// //     padding: 0.75rem 1rem;
+// //   }
+// //   header h1 {
+// //     font-size: 1.25rem;
+// //   }
+
+// //   /* About – stack vertically */
+//   #about .cantainer {
+//     flex-direction: column;
+//     // align-items: stretch;
+//     text-align: center;
+//   }
+// //   #about .cantainer p {
+// //     margin: 1rem 0;
+// //   }
+// //   #about .achievement_blocks {
+// //     flex-direction: column;
+// //     gap: 1rem;
+// //     align-items: center;
+// //   }
+// //   #about .achievement_block {
+// //     margin: 0;
+// //     padding: 1rem;
+// //   }
+// //   #about .achievement_block:nth-child(2) {
+// //     border-left: none;
+// //     border-right: none;
+// //     border-top: 1px solid #ddd;
+// //     border-bottom: 1px solid #ddd;
+// //   }
+// //   .achievement_block_title {
+// //     font-size: 2rem;
+// //   }
+
+// //   /* Maps / Main tour swiper */
+// //   .main_tour .main_tour-title {
+// //     font-size: 1.5rem;
+// //   }
+// //   .main_tour .main-tours-swiper {
+// //     height: 55vh;
+// //     min-height: 280px;
+// //   }
+// //   .main_tour .main-tours__slide-img-wrap {
+// //     min-height: 200px;
+// //   }
+
+// //   /* Tours – single column, full-width cards */
+//   #tours {
+// //     padding: 1.5rem 0;
+// //   }
+// //   #tours .tours_title {
+// //     font-size: 1.5rem;
+// //   }
+// //   #tours .tour_list .flex {
+// //     flex-direction: column;
+// //     align-items: center;
+// //     gap: 1rem;
+// //   }
+//   .tour {
+//     // width: 200px;
+//     background-color: #000;
+//   }
+// //   #tours .tour_button {
+// //     min-height: 44px;
+//   }
+
+// //   /* Cities – horizontal scroll */
+// // #cities .list_cities {
+// //     background-color: #000;
+// //     // flex-wrap: nowrap;
+// //     // justify-content: flex-start;
+// //     // overflow-x: auto;
+// //     // -webkit-overflow-scrolling: touch;
+// //     // padding: 0.5rem 0 1rem;
+// //     // margin: 0 -1rem;
+// //     // padding-left: 1rem;
+// //     // padding-right: 1rem;
+// // //     width: 100%;
+// // // }
+// // //   #cities .city {
+// // //     // flex-shrink: 0;
+// // //     width: 20%;
+// // //     height: 280px;
+// // //   }
+// // //   #cities .city.active {
+// // //     width: 40%;
+// // //   }
+
+// //   /* Comments */
+// //   .comments .title {
+// //     font-size: 1.5rem;
+// //   }
+// //   .comments__rating-label {
+// //     font-size: 0.8rem;
+// //   }
+
+// //   /* Contact */
+// //   #contact .cantainer {
+// //     text-align: center;
+// //   }
+
+// //   /* Footer */
+// //   footer {
+// //     padding: 1rem;
+// //   }
+// //   footer .footer__content {
+// //     flex-direction: column;
+// //     align-items: center;
+// //     gap: 1.5rem;
+// //     text-align: center;
+// //   }
+// //   footer .social_media a {
+// //     min-height: 44px;
+// //     display: inline-flex;
+// //     align-items: center;
+// //   }
+// // }
 // }
-//   #cities .city {
-//     // flex-shrink: 0;
-//     width: 20%;
-//     height: 280px;
-//   }
-//   #cities .city.active {
-//     width: 40%;
-//   }
-
-  /* Comments */
-  .comments .title {
-    font-size: 1.5rem;
-  }
-  .comments__rating-label {
-    font-size: 0.8rem;
-  }
-
-  /* Contact */
-  #contact .cantainer {
-    text-align: center;
-  }
-
-  /* Footer */
-  footer {
-    padding: 1rem;
-  }
-  footer .footer__content {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    text-align: center;
-  }
-  footer .social_media a {
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-  }
-}
-}
