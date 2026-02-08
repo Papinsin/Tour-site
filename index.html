@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dawud Travel</title>
+  <title>Hayat ecoTour</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"
   crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,30 +12,34 @@
 </head>
 
 <body>
+  <div class="menu-overlay"></div>
   <header>
-    <h1>Dawud Travel</h1>
-    <button type="button" class="burger" aria-label="Menu" aria-expanded="false">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+    <h1>Hayat ecoTour</h1>
     <div class="menu-panel flex">
       <nav class="nav_bar">
         <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#tours" data-i18n="nav.hiking">Hiking Tours</a>
+        <a href="#tours" data-i18n="nav.adventure">Adventure Tours</a>
+        <a href="#tours" data-i18n="nav.cultural">Cultural Tours</a>
+        <a href="#tours" data-i18n="nav.daytrips">Day Trips</a>
         <a href="#about" data-i18n="nav.about">About</a>
-        <a href="#tours" data-i18n="nav.tours">Tours</a>
-        <a href="#maps" data-i18n="nav.maps">Maps</a>
-        <a href="#cities" data-i18n="nav.cities">Cities</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
-        <a href="#comments" data-i18n="nav.comments">Comments</a>
-        <a href="#blog" data-i18n="nav.blog">Blog</a>
-        <!-- <div class="menu-languages" role="group" aria-label="Language"> -->
+        <a href="#contact" data-i18n="nav.contact">Contact Us</a>
       </nav>
-      <div class="lang-switcher">
-          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
-          <button type="button" class="lang-btn" data-lang="uz" aria-pressed="false">UZ</button>
+      <div class="header-right flex">
+        <div class="lang-switcher">
+          <button type="button" class="lang-btn-toggle" aria-expanded="false">
+            <i class="fa-solid fa-globe"></i>
+          </button>
+          <div class="lang-dropdown">
+            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
+            <button type="button" class="lang-btn" data-lang="uz" aria-pressed="false">UZ</button>
+          </div>
         </div>
-
-    </div>
+        <button type="button" class="burger" aria-label="Menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -43,7 +47,7 @@
     <section id="home">
       <div class="cantainer flex">
         <div class="panel_text">
-          <h2 data-i18n="home.title" class="panel_title">Dawud Travel </h2>
+          <h2 data-i18n="home.title" class="panel_title">Hayat ecoTour</h2>
           <p data-i18n="home.text" class="panel_sub-title">Explore the Hidden Heart of Uzbekistan</p>
         </div>
       </div>
@@ -51,8 +55,8 @@
     <section id="about">
       <div class="cantainer flex">
         <h2 class="about__title title" data-i18n="about.title">About Us</h2>
-        <p data-i18n="about.text">At Dawud Travel - Journey beyond the ordinary and discover the hidden heart of
-          Uzbekistan. Our trekking, hiking, and cultural tours invite you deep into the country’s most remote
+        <p data-i18n="about.text">At Hayat ecoTour - Journey beyond the ordinary and discover the hidden heart of
+          Uzbekistan. Our trekking, hiking, and cultural tours invite you deep into the country's most remote
           landscapes, where timeless traditions and breathtaking nature come together. Step off the beaten path and
           immerse yourself in genuine local life — this is travel that connects, inspires, and transforms.</p>
         <button type="button" class="about_btn">Learn More</button>
@@ -239,7 +243,7 @@
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                 class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <p class="comment__text">Highly recommend Dawud Travel for an authentic Silk Road adventure.</p>
+            <p class="comment__text">Highly recommend Hayat ecoTour for an authentic Silk Road adventure.</p>
             <div class="comment__client">— Client</div>
           </article>
         </div>
@@ -247,7 +251,7 @@
     </section>
   </main>
   <footer>
-    <h3>Dawud Travel</h3>
+    <h3>Hayat ecoTour</h3>
     <div class="cantainer">
       <div class="footer__content flex">
         <div class="footer_info">
@@ -269,6 +273,11 @@
       </div>
     </div>
   </footer>
+  
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/998915406119" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
   <!-- <h1>ddd</h1> -->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>

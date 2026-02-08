@@ -121,12 +121,52 @@
       btn.classList.toggle('active', isActive);
       btn.setAttribute('aria-pressed', isActive);
     });
+    
+    // Update current language display
+    var langCurrent = document.querySelector('.lang-current');
+    if (langCurrent) {
+      langCurrent.textContent = lang.toUpperCase();
+    }
+    
+    // Close dropdown after selection
+    var langSwitcher = document.querySelector('.lang-switcher');
+    if (langSwitcher) {
+      langSwitcher.classList.remove('open');
+      var toggleBtn = document.querySelector('.lang-btn-toggle');
+      if (toggleBtn) {
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    }
+    
     document.documentElement.lang = lang;
+  }
+
+  // Language switcher toggle button
+  var langToggle = document.querySelector('.lang-btn-toggle');
+  var langSwitcher = document.querySelector('.lang-switcher');
+  if (langToggle && langSwitcher) {
+    langToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = langSwitcher.classList.contains('open');
+      langSwitcher.classList.toggle('open');
+      this.setAttribute('aria-expanded', !isOpen);
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!langSwitcher.contains(e.target)) {
+        langSwitcher.classList.remove('open');
+        if (langToggle) {
+          langToggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
   }
 
   // Language switcher buttons
   document.querySelectorAll('.lang-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
       setLanguage(this.getAttribute('data-lang'));
     });
   });
@@ -200,20 +240,41 @@
   // Burger menu – toggle nav on small screens
   var burger = document.querySelector('.burger');
   var header = document.querySelector('header');
+  var body = document.body;
   var navLinks = document.querySelectorAll('.nav_bar a');
+  var menuOverlay = document.querySelector('.menu-overlay');
+  
+  function closeMenu() {
+    header.classList.remove('menu-open');
+    body.classList.remove('menu-open');
+    if (burger) {
+      burger.setAttribute('aria-expanded', 'false');
+    }
+  }
+  
   if (burger && header) {
-    burger.addEventListener('click', function () {
+    burger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = header.classList.contains('menu-open');
       header.classList.toggle('menu-open');
-      burger.setAttribute('aria-expanded', header.classList.contains('menu-open'));
+      body.classList.toggle('menu-open');
+      burger.setAttribute('aria-expanded', !isOpen);
     });
+    
     navLinks.forEach(function (link) {
       link.addEventListener('click', function () {
-        header.classList.remove('menu-open');
-        burger.setAttribute('aria-expanded', 'false');
+        closeMenu();
       });
     });
+    
+    if (menuOverlay) {
+      menuOverlay.addEventListener('click', function () {
+        closeMenu();
+      });
+    }
   }
 
 })();
 const video_hero = document.querySelector(".hero_video")
+video_hero.playbackRate = 1.2;
 video_hero.playbackRate = 1.2;
